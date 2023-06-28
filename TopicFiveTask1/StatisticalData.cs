@@ -32,48 +32,24 @@ namespace TopicFiveTask1
         public void largestNum()
         {
             int num;
-            if (num1 > num2 && num1 > num3)
-            {
-                num = num1;
-                MessageBox.Show($"{num} is the largest number");
-            }
-            else if (num2 > num3 && num2 > num3)
-            {
-                num = num2;
-                MessageBox.Show($"{num} is the lasrgest number");
-            }
-            else if (num3 > num1 && num3 > num2)
-            {
-                num = num3; 
-                MessageBox.Show($"{num} is the largest number");
-            }
+            
+            num = Math.Max(Math.Max(num1, num2), num3);
+
+            MessageBox.Show($"{num} is the largest number");
         }
 
         public void smallestNum()
         {
             int num;
+            
+            num = Math.Min(Math.Min(num1, num2), num3);
 
-            if (num1 < num2 && (num1 < num3))
-            {
-                num = num1;
-                MessageBox.Show($"{num} is the smallest number");
-            }
-
-            else if (num2 < num3 && (num2 < num1))
-            {
-                num = num2;
-                MessageBox.Show($"{num} is the smallest number");
-            }
-            else if (num3 < num1 && (num3 < num2))
-            {
-                num = num3;
-                MessageBox.Show($"{num} is the smallest number");
-            }
+            MessageBox.Show($"{num} is the smallest number");
         }
 
         public void average()
         {
-            int num = (num1 + num2 + num3) / 3;
+            double num = (num1 + num2 + num3) / 3.0;
 
             MessageBox.Show($"Average: {num}"); 
         }
