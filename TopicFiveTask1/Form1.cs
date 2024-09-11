@@ -36,7 +36,7 @@ namespace TopicFiveTask1
 
             number1.smallestNum();
             number1.largestNum();
-            number1.average();
+            number1.average();         
         }
     }
 }
